@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sign Up - PatientCare</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h2>Create Account</h2>
+
+<form id="signupForm">
+  <input type="email" id="email" placeholder="Email" required>
+  <input type="password" id="password" placeholder="Password" required>
+  <button type="submit">Sign Up</button>
+</form>
+
+<script type="module">
+ // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.8.0/firebase-auth.js"
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.8.0/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyCHtQvPolc5VsG7ap7hMaFl9bjoIIhxo5c",
+    authDomain: "final-assignment-6ce52.firebaseapp.com",
+    projectId: "final-assignment-6ce52",
+    storageBucket: "final-assignment-6ce52.firebasestorage.app",
+    messagingSenderId: "1097490759574",
+    appId: "1:1097490759574:web:c880f5be7d261dee8a27b7",
+    measurementId: "G-VH855LMH65"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+ 
+ 
+import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/12.8.0/firebase-app.js"
+
+const auth = getAuth();
+
+const signupForm = document.getElementById("signupForm");
+signupForm.addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const email = document.getElementById("email").value.trim();
+  const password = document.getElementById("password").value;
+
+  if (!email || !password) {
+    alert("Please enter both email and password.");
+    return;
+  }
+
+  try {
+    await createUserWithEmailAndPassword(auth, email, password);
+    alert("Account created successfully!");
+    window.location.href = "login.html"; // redirect to login
+  } catch (error) {
+    alert(error.message);
+  }
+});
+
+</script>
+</body>
+</html>

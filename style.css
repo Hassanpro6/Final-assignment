@@ -1,0 +1,205 @@
+/* GLOBAL */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #0a7, #0cc);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* NAVBAR */
+.navbar {
+  width: 100%;
+  height: 70px;
+  background: linear-gradient(to right, #0a7, #0cc);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+
+.nav-left {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-right a {
+  margin-left: 20px;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.nav-right a:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+.btn-small {
+  background: white;
+  color: #0a7;
+}
+
+/* HERO */
+.hero {
+  width: 100%;
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px 20px;
+  background: linear-gradient(to right, #0a7, #0cc);
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 20px;
+  margin-bottom: 25px;
+}
+
+.hero .btn {
+  background: #fff;
+  color: #0a7;
+  padding: 14px 30px;
+  border-radius: 30px;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.hero .btn:hover {
+  background: #0cc;
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* CONTENT & ABOUT */
+.content {
+  width: 90%;
+  max-width: 900px;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.content h2 {
+  color: #fff;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.content p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* SERVICES */
+.services {
+  width: 90%;
+  max-width: 1000px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 50px 20px;
+}
+
+.service-box {
+  background: white;
+  color: #0a7;
+  width: 280px;
+  padding: 30px;
+  margin: 15px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.service-box h3 {
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+/* FORMS (Login / Signup / Appointments) */
+form {
+  background: white;
+  color: #000;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+  width: 90%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  margin: 30px 0;
+}
+
+form input, form select, form textarea {
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 16px;
+}
+
+form textarea {
+  resize: none;
+  height: 80px;
+}
+
+form button, #logoutBtn {
+  background: linear-gradient(to right, #0a7, #0cc);
+  color: white;
+  font-weight: bold;
+  border: none;
+  padding: 14px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+form button:hover, #logoutBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+
+/* MY APPOINTMENTS LIST */
+#appointmentsList {
+  width: 90%;
+  max-width: 500px;
+  margin-bottom: 50px;
+}
+
+.appointment-card {
+  background: white;
+  color: #000;
+  padding: 15px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+
+/* FOOTER */
+footer {
+  width: 100%;
+  padding: 15px;
+  background: #0a7;
+  text-align: center;
+  color: white;
+}
